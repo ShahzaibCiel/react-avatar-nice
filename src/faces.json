@@ -1,0 +1,19 @@
+[
+  {
+    "sex": "woman",
+    "faceColor": "#AC6651",
+    "earSize": "big",
+    "eyeStyle": "oval",
+    "noseStyle": "short",
+    "mouthStyle": "smile",
+    "shirtStyle": "polo",
+    "glassesStyle": "none",
+    "hairColor": "#D2EFF3",
+    "hairStyle": "thick",
+    "hatStyle": "turban",
+    "hatColor": "#FC909F",
+    "eyeBrowStyle": "up",
+    "shirtColor": "#77311D",
+    "bgColor": "linear-gradient(45deg, #3e1ccd 0%, #ff6871 100%)"
+  }
+]
