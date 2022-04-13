@@ -14,7 +14,6 @@ const shapes = ["circle", "rounded", "square"];
 
 function App() {
   const [config, setConfig] = useState({
-    sex: "woman",
     faceColor: "#AC6651",
     earSize: "big",
     eyeStyle: "oval",
@@ -29,7 +28,7 @@ function App() {
     eyeBrowStyle: "up",
     shirtColor: "#77311D",
     bgColor: "linear-gradient(45deg, #3e1ccd 0%, #ff6871 100%)",
-    shape: "rounded",
+    shape: "square",
   });
 
   const myConfig = genConfig(config);
@@ -59,8 +58,9 @@ function App() {
           onClick={() =>
             setConfig({
               ...config,
-              hairStyle:
-                hairStyles[Math.floor(Math.random() * hairStyles.length)],
+              hairStyle: hairStyles.filter(
+                (_, i) => i !== hairStyles.indexOf(config.hairStyle)
+              )[Math.floor(Math.random() * hairStyles.length)],
             })
           }
         >
@@ -72,7 +72,9 @@ function App() {
           onClick={() =>
             setConfig({
               ...config,
-              hatStyle: hatStyles[Math.floor(Math.random() * hatStyles.length)],
+              hatStyle: hatStyles.filter(
+                (_, i) => i !== hatStyles.indexOf(config.hatStyle)
+              )[Math.floor(Math.random() * hatStyles.length)],
             })
           }
         ></div>
@@ -82,7 +84,9 @@ function App() {
           onClick={() =>
             setConfig({
               ...config,
-              eyeStyle: eyeStyles[Math.floor(Math.random() * eyeStyles.length)],
+              eyeStyle: eyeStyles.filter(
+                (_, i) => i !== eyeStyles.indexOf(config.eyeStyle)
+              )[Math.floor(Math.random() * eyeStyles.length)],
             })
           }
         >
@@ -94,8 +98,9 @@ function App() {
           onClick={() =>
             setConfig({
               ...config,
-              glassesStyle:
-                glassStyles[Math.floor(Math.random() * glassStyles.length)],
+              glassesStyle: glassStyles.filter(
+                (_, i) => i !== glassStyles.indexOf(config.glassesStyle)
+              )[Math.floor(Math.random() * glassStyles.length)],
             })
           }
         ></div>
@@ -117,8 +122,9 @@ function App() {
           onClick={() =>
             setConfig({
               ...config,
-              noseStyle:
-                noseStyles[Math.floor(Math.random() * noseStyles.length)],
+              noseStyle: noseStyles.filter(
+                (_, i) => i !== noseStyles.indexOf(config.noseStyle)
+              )[Math.floor(Math.random() * noseStyles.length)],
             })
           }
         >
@@ -130,8 +136,10 @@ function App() {
           onClick={() =>
             setConfig({
               ...config,
-              mouthStyle:
-                mouthStyles[Math.floor(Math.random() * mouthStyles.length)],
+
+              mouthStyle: mouthStyles.filter(
+                (_, i) => i !== mouthStyles.indexOf(config.mouthStyle)
+              )[Math.floor(Math.random() * mouthStyles.length)],
             })
           }
         >
@@ -143,14 +151,15 @@ function App() {
           onClick={() =>
             setConfig({
               ...config,
-              shirtStyle:
-                shirtStyles[Math.floor(Math.random() * shirtStyles.length)],
+              shirtStyle: shirtStyles.filter(
+                (_, i) => i !== shirtStyles.indexOf(config.shirtStyle)
+              )[Math.floor(Math.random() * shirtStyles.length)],
             })
           }
         >
           <img src="images/shirt.svg" alt="shirt" />
         </div>
-
+        {/* 
         <div
           className="faces"
           onClick={() =>
@@ -168,7 +177,7 @@ function App() {
               borderRadius: "50%",
             }}
           ></div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
